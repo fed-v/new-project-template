@@ -1,0 +1,115 @@
+//////////////////////////////////////////////////////
+///     General Styles
+//////////////////////////////////////////////////////
+
+html {
+  font-size: 1em;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;  // Safari font fix
+}
+
+body {
+  .display(flex);  // To achieve a sticky footer
+  .flex-direction(column);
+  font-family: @fontFamily;
+  font-size: 100%;
+  line-height: 1.2;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+// Section headers
+h2 {
+  font-size: 2.0em;
+  margin-bottom: 20px;
+  text-align: center;
+
+  &:after {
+    background-color: @dark-grey;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 75px;
+    margin: 6px auto;
+  }
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.6em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1em;
+}
+
+// Default link styles
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: @grey;  // This could change
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: @grey;
+  }
+}
+
+/* BEST PRACTICE : In order to NOT display the heading content
+on screen the recommended technique is described in this article
+by Steve Faulkner. Do not use display:none or visibility:hidden
+in your CSS stylesheet, as in that case the heading content will
+never be vocalized by screen readers, and more generally
+by assistive technologies. */
+
+.offscreen
+{
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+
+//////////////////////////////////////////////////////
+///    Tablet View
+//////////////////////////////////////////////////////
+
+@media @mq-tablet {
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+}
+
+
+//////////////////////////////////////////////////////
+///    Desktop View
+//////////////////////////////////////////////////////
+
+@media @mq-desktop {
+
+}

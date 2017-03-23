@@ -1,0 +1,75 @@
+//////////////////////////////////////////////////////
+///     Footer Styles
+//////////////////////////////////////////////////////
+
+// TODO: Make the footer sticky!!!
+
+.site-footer {
+    width:100%;
+    height: auto;
+    text-align: center;
+    background: @dark-grey-bg;
+    color: @dark-grey-text-color;
+    padding: 30px 0;
+    letter-spacing: 1px;
+    .flex(none);
+
+    a {
+        margin-right: 20px;
+
+        &:link,
+        &:visited {
+            color: @grey;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            color: @white;
+        }
+    }
+
+    .navigation-list{
+        margin-top: 10px;
+
+        display: none; // Hide this for now
+    }
+}
+
+.social-media {
+    margin-top: 20px;
+
+    .icon {
+        fill: @grey;
+    }
+}
+
+
+//////////////////////////////////////////////////////
+///    Tablet View
+//////////////////////////////////////////////////////
+
+@media @mq-tablet {
+
+    .site-footer {
+        .column-container {
+            .justify-content(center);
+            margin-top: 0px;
+            a {
+                margin-left: 10px;
+            }
+        }
+        .navigation-list {
+            margin-top: 0px;
+        }
+    }
+
+}
+
+
+//////////////////////////////////////////////////////
+///    Desktop View
+//////////////////////////////////////////////////////
+
+@media @mq-desktop {
+
+}

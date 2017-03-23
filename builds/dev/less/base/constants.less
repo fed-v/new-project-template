@@ -1,0 +1,91 @@
+//////////////////////////////////////////////////////
+///     Typography
+//////////////////////////////////////////////////////
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@fontFamily: "Open Sans", sans-serif;
+
+
+//////////////////////////////////////////////////////
+///     Colors
+//////////////////////////////////////////////////////
+
+// Grayscale
+@black-10: darken(#fff, 10%);
+@black-20: darken(#fff, 20%);
+@black-30: darken(#fff, 30%);
+@black-40: darken(#fff, 40%);
+@black-50: darken(#fff, 50%);
+@black-60: darken(#fff, 60%);
+@black-70: darken(#fff, 70%);
+@black-80: darken(#fff, 80%);
+@black-90: darken(#fff, 90%);
+
+// Message Colors
+@primary:  #428bca;
+@success:  #5cb85c;
+@warning:  #f0ad4e;
+@danger:   #d9534f;
+@info:     #5bc0de;
+
+// Social media (might need these sometime)
+@facebook: #3b5998;
+@twitter: #1da1f2;
+@google-plus: #dd4b39;
+@instagram: #8a3ab9;
+
+// Specific Colors
+@highlight-color: #40E0D0;
+@black: #00000;
+@white: #ffffff;
+@grey: #cccccc;
+@dark-grey-bg: #333333;
+@dark-grey-text-color: #9E9E9E;
+@icon-color: #666666;
+
+
+// TODO: Might want to get rid of these
+@base-color: #3F51B5;
+@background-color: cyan;
+@accent-color: orange;
+@dark-grey: #666666;
+@grey-background: #424242;
+@light-text: #9E9E9E;
+
+
+//////////////////////////////////////////////////////
+///     Media Queries
+//////////////////////////////////////////////////////
+
+@max-width: 1200px;
+
+// breakpoints based on device view
+@bp-xs: 400px;
+@bp-tablet: 600px;
+@bp-desktop: 1024px;
+@bp-xl: @max-width;
+
+
+// media query strings
+// NOTE: the default size designed for is 400-600px (mobile phones)
+// everything less than the smallest cut off - rarely used
+@mq-xs: ~"only screen and (max-width: "@bp-xs~")";
+
+// everything as big or bigger than tablet-min (or tablet) sized
+@mq-tablet: ~"only screen and (min-width: "@bp-tablet~")";
+
+// everything as big or bigger than desktop-min or laptop-min sized
+@mq-desktop: ~"only screen and (min-width: "@bp-desktop~")";
+
+// everything bigger than the largest possible size
+@mq-xl: ~"only screen and (min-width: "@bp-xl~")";
+
+// Media query for retina screens
+// Desktop screen devices
+@mq-retina: ~"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+// everything as big or bigger than tablet-min (or tablet) sized with retina display
+@mp-retina-tablet: ~"(min-device-width: "@bp-tablet~") and (-webkit-min-device-pixel-ratio: 2), (min-device-width: "@bp-tablet~") and (min-resolution: 192dpi), (min-width: "@bp-tablet~") and (-webkit-min-device-pixel-ratio: 2), (min-width: "@bp-tablet~") and (min-resolution: 192dpi)";
+
+// everything as big or bigger than desktop-min or laptop-min sized with retina display
+@mp-retina-desktop: ~"(min-device-width: "@bp-desktop~") and (-webkit-min-device-pixel-ratio: 2), (min-device-width: "@bp-desktop~") and (min-resolution: 192dpi), (min-width: "@bp-desktop~") and (-webkit-min-device-pixel-ratio: 2), (min-width: "@bp-desktop~") and (min-resolution: 192dpi)";

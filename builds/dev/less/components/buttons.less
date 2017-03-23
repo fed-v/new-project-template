@@ -1,0 +1,22 @@
+//////////////////////////////////////////////////////
+///     Buttons Styles
+//////////////////////////////////////////////////////
+
+.button {
+  background: @base-color;
+  border: none;
+  .border-radius(40px);
+  color: @white;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding: 12px 27px;
+  text-align: center;
+  text-transform: uppercase;
+
+  // If a :hover pseudo class is styled, :focus should also be styled for accessibility.
+  &:hover,
+  &:focus,
+  &:active {
+    color: @grey;
+  }
+}
