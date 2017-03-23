@@ -1,11 +1,11 @@
 {
-  "name": "less-is-more",
+  "name": "new-project-template",
   "version": "2.1.0",
-  "description": "A Less front end template",
+  "description": "A simple static website project template",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fed-v/less-css-template.git"
+    "url": "https://github.com/fed-v/new-project-template.git"
   },
   "keywords": [
     "less",
@@ -17,13 +17,14 @@
   "author": "Federico Venturino",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fed-v/less-css-template.git/issues"
+    "url": "https://github.com/fed-v/new-project-template.git/issues"
   },
   "readme": "README.md",
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "browserify": "^11.0.1",
     "del": "^1.2.0",
+    "lesshat": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-changed": "^1.2.1",
