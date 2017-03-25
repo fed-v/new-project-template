@@ -2,19 +2,43 @@
 ///     Buttons Styles
 //////////////////////////////////////////////////////
 
+// Active Rules
 .button {
   background: @highlight-color;
   border: none;
   .border-radius(0px);
+  .box-sizing(content-box);  // Avoids input elements from getting padding when width is given
   color: @white;
-  display: block;
-  font-size: 1em;
+  display: inline-block;
   letter-spacing: 0.02em;
   line-height: 1;
+  margin: 30px;
   padding: 12px 27px;
   text-align: center;
   text-transform: uppercase;
+
+  &:link,
+  &:visited {
+    color: @white;
+  }
+
+  // Disabled Rules
+  &.disabled {
+    background: @disabled;
+    color: @dark-grey;
+    cursor: default;
+
+    &:link,
+    &:visited {
+      color: @dark-grey;
+    }
+  }
+
+
 }
+
+
+
 
 
 //////////////////////////////////////////////////////
@@ -50,6 +74,18 @@
       top: -2px;
       .transition(0.5s);
     }
+
+    // Disabled Rules
+    &.disabled {
+      &:hover,
+      &:focus,
+      &:active {
+        .box-shadow(none);
+        position: relative;
+        top: 0px;
+      }
+    }
+
   }
 
 }
