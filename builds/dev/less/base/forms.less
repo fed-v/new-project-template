@@ -2,10 +2,68 @@
 ///     Form Styles
 //////////////////////////////////////////////////////
 
-#contact-form {
-  background: red;
+form {
+  width: 90%;
+  margin: 50px auto;
+  max-width: 600px;
 }
 
-input {
-  border: 2px solid red;
+input, textarea {
+  .border-radius(4px);
+  border: 1px solid @grey;
+  padding: 5px 7px;
+
+  &:focus {
+    border: 1px solid @dark-grey;
+  }
+
+}
+
+input[type="submit"] {
+  width: 100%;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+
+  label{
+    margin-bottom: 5px;
+  }
+}
+
+
+
+
+//////////////////////////////////////////////////////
+///    Tablet View
+//////////////////////////////////////////////////////
+
+@media @mq-tablet {
+
+  form {
+    width: 75%;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin: auto;
+    min-width: 150px;
+    width: auto;
+  }
+
+}
+
+
+//////////////////////////////////////////////////////
+///    Desktop View
+//////////////////////////////////////////////////////
+
+@media @mq-desktop {
+
+  form {
+    width: 50%;
+  }
+
 }

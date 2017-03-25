@@ -17,7 +17,7 @@ body {
   font-family: @fontFamily;
   font-size: 100%;
   line-height: 1.2;
-  height: 100%;
+  height: 100%;  // To achieve a sticky footer
 }
 
 h1 {
@@ -72,6 +72,20 @@ a {
   }
 }
 
+// Default icon styles
+.icon {
+  fill: @icon-color;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+// Horizontal navigation links
+.navigation-list {
+  .display(flex);
+  .flex-direction(column);
+}
+
 /* BEST PRACTICE : In order to NOT display the heading content
 on screen the recommended technique is described in this article
 by Steve Faulkner. Do not use display:none or visibility:hidden
@@ -101,6 +115,14 @@ by assistive technologies. */
 
   h1 {
     font-size: 2.2em;
+  }
+
+  .navigation-list {
+    .flex-direction(row);
+
+    a {
+      margin-left: 20px;
+    }
   }
 
 }
