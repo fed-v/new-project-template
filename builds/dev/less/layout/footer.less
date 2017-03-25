@@ -2,8 +2,6 @@
 ///     Footer Styles
 //////////////////////////////////////////////////////
 
-// TODO: Make the footer sticky!!!
-
 .site-footer {
     width:100%;
     height: auto;
@@ -71,5 +69,17 @@
 //////////////////////////////////////////////////////
 
 @media @mq-desktop {
+
+    .social-media {
+
+        .icon {
+            .transition(.5s ease-in-out);
+
+            &:hover, &focus{
+                fill: @highlight-color;
+                .transition(.5s ease-in-out);
+            }
+        }
+    }
 
 }

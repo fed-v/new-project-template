@@ -20,3 +20,4 @@ main.scss – output file that brings together all of the above parts using each
 - If a :hover pseudo class is styled, :focus should also be styled for accessibility.
 - Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main.
 - Do not use !important.
+- Alphabetize so that duplicate rules are easier to spot.

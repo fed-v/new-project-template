@@ -5,18 +5,51 @@
 .button {
   background: @highlight-color;
   border: none;
-  .border-radius(40px);
+  .border-radius(0px);
   color: @white;
+  display: block;
+  font-size: 1em;
   letter-spacing: 0.02em;
   line-height: 1;
   padding: 12px 27px;
   text-align: center;
   text-transform: uppercase;
+}
 
-  // If a :hover pseudo class is styled, :focus should also be styled for accessibility.
-  &:hover,
-  &:focus,
-  &:active {
-    color: @grey;
+
+//////////////////////////////////////////////////////
+///    Tablet View
+//////////////////////////////////////////////////////
+
+@media @mq-tablet {
+
+  .button {
+    min-width: 150px;
   }
+
+}
+
+
+//////////////////////////////////////////////////////
+///    Desktop View
+//////////////////////////////////////////////////////
+
+@media @mq-desktop {
+
+  .button {
+    position: relative;
+    top: 0px;
+    .transition(0.5s);
+
+    // If a :hover pseudo class is styled, :focus should also be styled for accessibility.
+    &:hover,
+    &:focus,
+    &:active {
+      .box-shadow(0 10px 20px rgba(0,0,0,.10), 0 6px 6px rgba(0,0,0,.20));
+      position: relative;
+      top: -2px;
+      .transition(0.5s);
+    }
+  }
+
 }
