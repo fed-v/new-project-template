@@ -11,3 +11,10 @@ The CSS architecture is based on the 7-1 Pattern by Hugo Giraudel which consists
 - vendors/ – contains 3rd-party styles, mixins, etc.
 
 main.scss – output file that brings together all of the above parts using each folder's module.less file.
+
+# Styleguide Rules
+
+- Only nest 3 levels deep.
+- If a :hover pseudo class is styled, :focus should also be styled for accessibility.
+- Avoid using IDs throughout the site. Use IDs for parent elements. Example: Header, Footer, Main.
+- Do not use !important.

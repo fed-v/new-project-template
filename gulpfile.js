@@ -51,7 +51,7 @@ gulp.task('clean', function(cb) {
 // Less Task: Compiles less files into one minified css file and
 // pipes the result to production folder.
 gulp.task('styles', function() {
-    return gulp.src(config.DEV_ASSETS.styles + 'project.less')
+    return gulp.src(config.DEV_ASSETS.styles + 'main.less')
     .pipe(plumber({ errorHandler: onError }))
     .pipe(size({ title: "Source file", showFiles: true }))
     .pipe(less())
