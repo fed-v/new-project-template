@@ -34,11 +34,13 @@
     }
   }
 
-
 }
 
-
-
+// Disabled rules for buttons
+button:disabled {
+  background: @disabled;
+  color: @dark-grey;
+}
 
 
 //////////////////////////////////////////////////////
@@ -86,6 +88,17 @@
       }
     }
 
+  }
+
+  // Disabled rules for buttons
+  button:disabled {
+    &:hover,
+    &:focus,
+    &:active {
+      .box-shadow(none);
+      position: relative;
+      top: 0px;
+    }
   }
 
 }
