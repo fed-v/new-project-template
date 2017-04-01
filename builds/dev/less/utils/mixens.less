@@ -10,8 +10,12 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
 
+    /* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
+    @media(max-width: 1024px) {
+        background-attachment: scroll;
+    }
+}
 
 // Responsive Background Image - Scroll
 .back-image(@image) {
@@ -39,9 +43,20 @@
   }
 }
 
+// Parallax Effect
+.parallax(@image, @height) {
+  background-image: url(@image);
+  height: @height;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //.background-cover(@image);
+}
 
-// Flip an image 180 degrees (usefull for next/prev arrows!)
-.flip(){
+
+  // Flip an image 180 degrees (usefull for next/prev arrows!)
+.flip() {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -52,7 +67,7 @@
 
 
 // Opacity for just the background without affecting its content!
-.opacity-background(@opacity: 0.5){
+.opacity-background(@opacity: 0.5) {
     background: rgb(255,255,255);
     background: transparent\9;
     background: rgba(255,255,255,@opacity);
@@ -62,7 +77,7 @@
 
 
 // Cool 3D effect for texts
-.3D-text(){
+.3D-text() {
 	text-shadow: 0 1px 0 #ccc,
                  0 2px 0 #c9c9c9,
                  0 3px 0 #bbb,
@@ -105,7 +120,7 @@
 }
 
 /*	Nesting mixins inside a ruleset with a #namespace.  */
-#Font-family{
+#Font-family {
   .Serif (@weight: normal, @size: 14px, @lineHeight: 20px) {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: @weight;
