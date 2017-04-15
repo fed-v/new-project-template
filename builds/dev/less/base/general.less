@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////////
 
 html {
-  font-size: 1em;
   height: 100%;
   overflow-y: scroll;
   -ms-overflow-style: scrollbar;
@@ -14,12 +13,11 @@ html {
 body {
   .display(flex);  // To achieve a sticky footer
   .flex-direction(column);
-  font-family: @fontFamily;
-  font-size: 100%;
-  line-height: 1.2;
+  .font-rule(@font-family, @type-base, normal, normal, 1.2);
   height: 100%;  // To achieve a sticky footer
 }
 
+// Header Styles (TODO: use .font-rule mixin)
 h1 {
   font-size: 1.8em;
 }

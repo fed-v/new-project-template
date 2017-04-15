@@ -3,7 +3,22 @@
 //////////////////////////////////////////////////////
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@fontFamily: "Open Sans", sans-serif;
+@font-family: "Open Sans", sans-serif;
+
+// Font Sizes (TODO: look into setting this in ems or rems)
+@type-smallest: 11px;
+@type-smaller: 12px;
+@type-small: 14px;
+@type-base: 16px;
+@type-large: 18px;
+@type-larger: 20px;
+@type-largest: 24px;
+@type-jumbo: 34px;
+
+// Font weights
+@light-weight: 100;
+@regular-weight: 400;
+@bold-weight: 600;
 
 
 //////////////////////////////////////////////////////
@@ -29,10 +44,10 @@
 @info:     #5bc0de;
 
 // Social media (might need these sometime)
-@facebook: #3b5998;
-@twitter: #1da1f2;
-@google-plus: #dd4b39;
-@instagram: #8a3ab9;
+@facebook-color: #3b5998;
+@twitter-color: #1da1f2;
+@google-plus-color: #dd4b39;
+@instagram-color: #8a3ab9;
 
 // Specific Colors
 @highlight-color: #00c5cd;
@@ -46,12 +61,27 @@
 @disabled: @grey;
 
 
+//////////////////////////////////////////////////////
+///     Z-Index Scale (private vars, do not change!)
+//////////////////////////////////////////////////////
+
+@zIndex-1: 100;
+@zIndex-2: 200;
+@zIndex-3: 300;
+@zIndex-4: 400;
+@zIndex-5: 500;
+@zIndex-6: 600;
+@zIndex-7: 700;
+@zIndex-8: 800;
+@zIndex-9: 900;
+@zIndex-10: 1000;
+
 
 //////////////////////////////////////////////////////
 ///     Media Queries
 //////////////////////////////////////////////////////
 
-@max-width: 1200px;
+@max-width: 980px;
 
 // breakpoints based on device view
 @bp-xs: 400px;
@@ -83,3 +113,11 @@
 
 // everything as big or bigger than desktop-min or laptop-min sized with retina display
 @mp-retina-desktop: ~"(min-device-width: "@bp-desktop~") and (-webkit-min-device-pixel-ratio: 2), (min-device-width: "@bp-desktop~") and (min-resolution: 192dpi), (min-width: "@bp-desktop~") and (-webkit-min-device-pixel-ratio: 2), (min-width: "@bp-desktop~") and (min-resolution: 192dpi)";
+
+
+//////////////////////////////////////////////////////
+///     Miscellaneous
+//////////////////////////////////////////////////////
+
+// Image directory
+@img-directory: '../images/';

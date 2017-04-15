@@ -35,6 +35,12 @@ a img, :link img, :visited img { border:none }
 address { font-style:normal }
 
 
+// Remove input inner shadow on Mobile Safari (iPhone)
+input:not([type=checkbox]):not([type=radio]) {
+  -webkit-appearance: none;
+}
+
+
 // Disable Textarea Resizing
 textarea { resize: none; }
 

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////
-///     Custom Mixens
+///     Custom Mixins
 //////////////////////////////////////////////////////
 
 
@@ -55,7 +55,7 @@
 }
 
 
-  // Flip an image 180 degrees (usefull for next/prev arrows!)
+  // Flip an image 180 degrees (useful for next/prev arrows!)
 .flip() {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -173,4 +173,23 @@
     -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
 	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
 	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+// Creates a perfect circle
+.circle (@size) {
+  height: @size;
+  width: @size;
+  -webkit-border-radius: (ceil(@size/2));
+  -moz-border-radius: (ceil(@size/2));
+  border-radius: (ceil(@size/2));
+}
+
+// Sets font styles in one simple rule
+.font-rule (@family, @size, @weight: normal, @style: normal, @lineHeight: normal, @spacing: normal) {
+  font-family: @family;
+  font-weight: @weight;
+  font-style: @style;
+  font-size: @size;
+  line-height: @lineHeight;
+  letter-spacing: @spacing;
 }

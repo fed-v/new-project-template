@@ -11,10 +11,15 @@
   .display(flex);
   position: relative;
   .align-items(center);
-}
+  z-index: 1000;
 
-.site-header h1 {
-  margin: -5px 0px 0px 20px;
+  h1 {
+    margin: -5px 0 0 20px;
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
 }
 
 .site-header .navigation-list{
@@ -25,11 +30,11 @@
   // The height of the header so it positions right below it
   top: 60px;
   width: 100%;
-  left: 0px;
+  left: 0;
   text-align: center;
 
  /* Slide Animation */
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
   .transition(1s ease-in-out);
 }
@@ -73,7 +78,7 @@
 }
 
 .navbar-toggle span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 
 .navbar-toggle span:nth-child(2), .navbar-toggle span:nth-child(3) {
@@ -86,7 +91,7 @@
 
 .navbar-toggle.open span:nth-child(1) {
   top: 18px;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 
@@ -100,7 +105,7 @@
 
 .navbar-toggle.open span:nth-child(4) {
   top: 18px;
-  width: 0%;
+  width: 0;
   left: 50%;
 }
 
@@ -117,12 +122,12 @@
     }
 
     .site-header h1 {
-        margin: 0px;
+        margin: 0;
     }
 
     .site-header .navigation-list{
         position: relative;
-        top: 0px;
+        top: 0;
         width: auto;
         background: transparent;
         text-align: left;
@@ -132,10 +137,9 @@
     }
 
     .site-header .navigation-list li a {
-        padding: 0px;
+        padding: 0;
         border: none;
         width: auto;
-        display: relative;
     }
 
     .site-header .navbar-toggle {

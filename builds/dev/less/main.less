@@ -14,9 +14,31 @@ version history: [location of file]
 ///     Imports
 //////////////////////////////////////////////////////
 
-@import "vendors/module";
-@import "base/module";
-@import "components/module";
-@import "layout/module";
-@import "pages/module";
-@import "utils/module";
+/* Vendor Dependencies */
+@import "vendors/normalize";
+@import "vendors/html5-boilerplate-defaults";
+
+/* Utils */
+@import "utils/reset";
+@import "utils/constants";
+@import "../../../node_modules/lesshat/lesshat";
+@import "utils/mixens";
+// @import "utils/typography";
+
+/* Base Styles */
+@import "base/general";
+@import "base/tables";
+@import "base/forms";
+@import "base/buttons";
+
+/* Layout Styles */
+@import "layout/header";
+@import "layout/containers";
+@import "layout/parallax";
+@import "layout/footer";
+
+/* Component Styles */
+
+/* Pages Styles */
+@import "pages/contact";
+@import "pages/home";

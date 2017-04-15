@@ -1,17 +1,40 @@
-// Containers
-.column-container {
+//////////////////////////////////////////////////////////////
+//  PRIMARY STRUCTURE
+
+.container {
+  max-width: @max-width;
+  margin: 0 auto;
+}
+
+.multi-column,
+.two-column {
   .display(flex);
   .flex-direction(column);
 }
 
-.column {
-  margin: 0 0 36px 0;
-
-  &:last-child {
-    margin-right: 0px;
+// Two column container with columns of different size
+.two-column {
+  .small-column {
+    .flex(1);
+    min-width: 250px;
+  }
+  .large-column {
+    .flex(2);
+  }
+  :first-child {
+    margin: 0 0 20px 0;
   }
 }
 
+.flex-item {
+  margin: 0 0 36px 0;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+// TODO: Check if I still want this
 .main-content {
   background: @white;
   padding: 30px 25px 50px 25px;
@@ -25,18 +48,8 @@
 
 @media @mq-tablet {
 
-  .column-container {
-    .flex-direction(row);
-  }
 
-  .column {
-    margin: 0 0 0 36px;
-
-    &:last-child {
-      margin-right: 0px;
-    }
-  }
-
+  // TODO: Check if I still want this
   .main-content {
     width: 80%;
     margin: auto;
@@ -52,5 +65,23 @@
 //////////////////////////////////////////////////////
 
 @media @mq-desktop {
+  .multi-column,
+  .two-column {
+    .flex-direction(row);
+  }
+
+  .two-column {
+    :first-child {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  .flex-item {
+    margin: 0 0 0 36px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
 }
