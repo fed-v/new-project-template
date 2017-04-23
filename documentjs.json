@@ -1,8 +1,0 @@
-{
-  "sites": {
-    "styles": {
-      "glob": "builds/dev/less/**/*.{less,md}",
-      "dest": "styleguide"
-    }
-  }
-}
