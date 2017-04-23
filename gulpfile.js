@@ -8,7 +8,7 @@
 /////////////////////////////////////////////////////
 
 var gulp         = require('gulp'),
-    gutil        = require('gulp-util'),
+    gutil        = require('gulp-util'),                // Why is this here again?
     notify       = require( 'gulp-notify' ),            // Pop-up notifications.
     plumber      = require('gulp-plumber'),             // Prevents gulp.watch from crashing.
     watch        = require('gulp-watch'),
@@ -27,18 +27,27 @@ var gulp         = require('gulp'),
     changed      = require('gulp-changed'),             // Checks if the file in stream has changed before continuing
     source       = require('vinyl-source-stream'),
     config       = require('./config.json'),            // Import JSON file with all configuration variables
-    svgmin       = require('gulp-svgmin');
-
-
-
+    svgmin       = require('gulp-svgmin'),
+    lesshint = require('gulp-lesshint');                // Lint LESS
 
 
 //////////////////////////////////////////////////////
 ///     Gulp Tasks
 //////////////////////////////////////////////////////
 
-// Clean Task: Removes CSS, Javascript and HTML files from production environment
-// for a clean start.
+// Lint Task: Lints all less file for errors and warnings. Run this outside of default because the output is huge.
+gulp.task('lint', function() {
+    return gulp.src(config.DEV_ASSETS.styles + '/*/*.less')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(lesshint({
+            // Options
+        }))
+        .pipe(lesshint.reporter()) // Leave empty to use the default, "stylish"
+        .pipe(lesshint.failOnError()); // Use this to fail the task on lint errors
+});
+
+
+// Clean Task: Removes CSS, Javascript and HTML files from production environment for a clean start.
 gulp.task('clean', function(cb) {
     del([
         config.PROD_ASSETS.styles + '*',
