@@ -5,7 +5,7 @@
 // Active Rules
 .button {
   background: @highlight-color;
-  border: none;
+  border: 0;
   .border-radius(0px);
   .box-sizing(content-box);  // Avoids input elements from getting padding when width is given
   color: @white;
@@ -71,7 +71,7 @@ button:disabled {
     &:hover,
     &:focus,
     &:active {
-      .box-shadow(0 10px 20px rgba(0,0,0,.10), 0 6px 6px rgba(0,0,0,.20));
+      .box-shadow(0 10px 20px rgba(0, 0, 0, .10), 0 6px 6px rgba(0, 0, 0, .20));
       position: relative;
       top: -2px;
       .transition(0.5s);
