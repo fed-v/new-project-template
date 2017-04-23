@@ -14,31 +14,31 @@ version history: [location of file]
 ///     Imports
 //////////////////////////////////////////////////////
 
-/* Vendor Dependencies */
+/* Vendor Dependencies: 3rd party styles - do not modify! */
 @import "vendors/normalize";
-@import "vendors/html5-boilerplate-defaults";
+@import "vendors/html5-boilerplate-defaults";    // TODO: maybe merge this with reset?
 
-/* Utils */
+/* Utils: Helpers like variables declarations and mixins */
 @import "utils/reset";
 @import "utils/constants";
 @import "../../../node_modules/lesshat/lesshat";
 @import "utils/mixens";
-// @import "utils/typography";
 
-/* Base Styles */
-@import "base/general";
+/* Base Styles: Element level abstraction */
+// @import "utils/typography";
+@import "base/general";    // TODO: I could break this out a little more...
 @import "base/tables";
 @import "base/forms";
 @import "base/buttons";
 
-/* Layout Styles */
+/* Layout Styles: Section level abstraction */
 @import "layout/header";
 @import "layout/containers";
-@import "layout/parallax";
 @import "layout/footer";
 
-/* Component Styles */
+/* Component Styles: Reusable independent modules */
+@import "components/parallax";
 
-/* Pages Styles */
+/* Page Specific Styles */
 @import "pages/contact";
 @import "pages/home";
