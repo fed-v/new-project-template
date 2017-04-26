@@ -4,38 +4,17 @@
     <section class="column-container">
         <h2 class="offscreen">Copyright section</h2>
         <p><span id="copyright">{{ ./year }}</span> - All rights reserved</p>
-        <nav role="navigation">
-            <h3 class="offscreen">Secondary navigation</h3>
-            <ul class="navigation-list">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
-            </ul>
-        </nav>
     </section>
     <section class="social-media">
         <h2 class="offscreen">Social media links</h2>
-        <a href="#">
-            <svg class="icon facebook" role="img" title="Facebook">
-                <use xlink:href="images/icons.svg#facebook" />
-            </svg>
-        </a>
-        <a href="#">
-            <svg class="icon twitter" role="img" title="Facebook">
-                <use xlink:href="images/icons.svg#twitter" />
-            </svg>
-        </a>
-        <a href="#">
-            <svg class="icon google" role="img" title="Facebook">
-                <use xlink:href="images/icons.svg#google" />
-            </svg>
-        </a>
-        <a href="#">
-            <svg class="icon instagram" role="img" title="Instagram">
-                <use xlink:href="images/icons.svg#instagram" />
-            </svg>
-        </a>
+
+        <!-- Iterate through the socialMedia array passed to extract each value -->
+        {{#each ./socialMedia}}
+            <a href="{{ ./link }}">
+                <svg class="{{ ./class }}" role="img" title="{{ ./name }}">
+                    <use xlink:href="images/icons.svg#{{ ./icon }}" />
+                </svg>
+            </a>
+        {{/each}}
     </section>
 </section>
