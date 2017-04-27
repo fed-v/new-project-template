@@ -3,7 +3,11 @@
 /////////////////////////////////////////////////////
 
 export const PHONE = "555-6789";
-export const COMPANY_ADDRESS = "";
+export const COMPANY_ADDRESS = {
+    address: "First Canadian Place, Toronto, ON",
+    latitude: 43.6488906,
+    longitud: -79.3830613
+};
 export const SOCIAL_MEDIA = [
     {
         name: "Facebook",

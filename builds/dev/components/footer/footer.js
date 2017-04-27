@@ -1,3 +1,8 @@
+/**
+ * Footer Component
+ */
+
+
 // Import dependencies
 import $ from "jquery";
 import {SOCIAL_MEDIA} from "../../js/utils/constants.js";  // Don't forget the curly braces!

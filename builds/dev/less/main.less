@@ -22,10 +22,10 @@ version history: [location of file]
 @import "utils/reset";
 @import "utils/constants";
 @import "../../../node_modules/lesshat/lesshat";
-@import "utils/mixens";
+@import "utils/mixins";
 
 /* Base Styles: Element level abstraction */
-// @import "utils/typography";
+// @import "base/typography";
 @import "base/general";    // TODO: I could break this out a little more...
 @import "base/tables";
 @import "base/forms";
@@ -38,6 +38,7 @@ version history: [location of file]
 
 /* Component Styles: Reusable independent modules */
 @import "components/parallax";
+@import "components/map";
 
 /* Page Specific Styles */
 @import "pages/contact";
