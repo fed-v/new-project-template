@@ -1,7 +1,10 @@
-//////////////////////////////////////////////////////
-///     Constants
-/////////////////////////////////////////////////////
+/**
+ * Constants
+ */
 
+"use strict";
+
+export const SITE_NAME = "Website Title";
 export const PHONE = "555-6789";
 export const COMPANY_ADDRESS = {
     address: "First Canadian Place, Toronto, ON",

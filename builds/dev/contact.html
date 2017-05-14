@@ -5,138 +5,110 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"><!--<![endif]-->
 
-    <head>
-        <meta charset="utf-8"/>
+<head>
+    <meta charset="utf-8"/>
 
-        <!-- Care about IE? -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Care about IE? -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <!-- Title tag is MANDATORY -->
-        <title>HTML Boilerplate</title>
+    <!-- Title tag is MANDATORY -->
+    <title>HTML Boilerplate</title>
 
-        <!-- Declare Viewport for Mobile Devices -->
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Declare Viewport for Mobile Devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <!-- META DATA (KEYWORD META TAG IS DEPRECIATED)-->
-        <meta name="description" content="My custom HTML5 boilerplate." />
-        <meta name="author" content="Federico Venturino">
+    <!-- META DATA (KEYWORD META TAG IS DEPRECIATED)-->
+    <meta name="description" content="My custom HTML5 boilerplate." />
+    <meta name="author" content="Federico Venturino">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="images/favicon.ico">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-        <!-- Font Awesome scalable vector icons (https://fortawesome.github.io/Font-Awesome/) -->
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome scalable vector icons (https://fortawesome.github.io/Font-Awesome/) -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- Your custom styles -->
-        <link rel="stylesheet" href="css/styles.min.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
 
-        <!--[if lte IE 8]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-        <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/src/respond.js"></script>
-        <![endif]-->
-    </head>
+    <!--[if lte IE 8]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/src/respond.js"></script>
+    <![endif]-->
+</head>
 
-    <body>
-
-
-
-        <!--*******************************************************-->
-        <!--			 	       Header					       -->
-        <!--*******************************************************-->
-
-        <header class="site-header">
-            <h1> Website Title</h1>
-            <nav class="nav-bar" role="navigation">
-                <h2 class="offscreen">Main navigation</h2>
-                <div class="logo"></div>
-                <ul id="navigation-list" class="navigation-list">
-                    <li><a href="">Link 1</a></li>
-                    <li><a href="">Link 2</a></li>
-                    <li><a href="">Link 3</a></li>
-                    <li><a href="">Link 4</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- Hamburger Button-->
-            <button id="navbar-toggle" type="button" class="navbar-toggle">
-                <!--<span class="sr-only">Toggle navigation</span>-->
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
+<body>
 
 
 
-        <!--*******************************************************-->
-        <!--			 	     Main Content					   -->
-        <!--*******************************************************-->
+<!--*******************************************************-->
+<!--			 	       Header					       -->
+<!--*******************************************************-->
 
-        <main class="main-content" role="main">
-
-            <section>
-                <h2>Contact us</h2>
-                <form id="contactForm" action="#" method="post">
-
-                    <div class="formgroup">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name" maxlength="25" pattern="[a-z A-Z-]+" placeholder="Your name" autofocus></input>
-                    </div>
-
-                    <div class="formgroup">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" maxlength="75" placeholder="email@gmail.com"></input>
-                    </div>
-
-                    <div class="formgroup">
-                        <label for="enquiry">Enquiry</label>
-                        <textarea id="enquiry" name="enquiry" rows="5" cols="100" maxlength="750" placeholder="Details of your enquiry"></textarea>
-                    </div>
-
-                    <input class="button" type="submit" value="Send"></input>
-
-                </form>
-            </section>
-
-            <section>
-                <h2>Map</h2>
-                <div id="map" class="map"></div>
-            </section>
-
-        </main>
+<header id="site-header" class="site-header"></header>
 
 
 
-        <!--*******************************************************-->
-        <!--			 	       Footer					       -->
-        <!--*******************************************************-->
+<!--*******************************************************-->
+<!--			 	     Main Content					   -->
+<!--*******************************************************-->
 
-        <footer id="site-footer" class="site-footer"></footer>
+<main class="main-content" role="main">
+
+    <section>
+        <h2>Contact us</h2>
+        <form id="contactForm" action="#" method="post">
+
+            <div class="formgroup">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" maxlength="25" pattern="[a-z A-Z-]+" placeholder="Your name" autofocus></input>
+            </div>
+
+            <div class="formgroup">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" maxlength="75" placeholder="email@gmail.com"></input>
+            </div>
+
+            <div class="formgroup">
+                <label for="enquiry">Enquiry</label>
+                <textarea id="enquiry" name="enquiry" rows="5" cols="100" maxlength="750" placeholder="Details of your enquiry"></textarea>
+            </div>
+
+            <input class="button" type="submit" value="Send"></input>
+
+        </form>
+    </section>
+
+    <section>
+        <h2>Map</h2>
+        <div id="map-container" class="map"></div>
+    </section>
+
+</main>
 
 
 
-        <!--*******************************************************-->
-        <!--			 	   Javascript Links					   -->
-        <!--*******************************************************-->
+<!--*******************************************************-->
+<!--			 	       Footer					       -->
+<!--*******************************************************-->
+
+<footer id="site-footer" class="site-footer"></footer>
+
+
+
+<!--*******************************************************-->
+<!--			 	   Javascript Links					   -->
+<!--*******************************************************-->
 
         <script src="./js/dist/steal.production.js"></script>
 
-        <!-- Steal a specific component to display on this page only
-        <script type="text/steal-module">
-            steal.import("components/map/map").then(function(map){
-                    console.log("Components loaded!");
-            });
-        </script> -->
 
-        <!-- SVG for IE and older browsers -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.3/svg4everybody.min.js"></script>
-        <script type="text/javascript">
-            svg4everybody();
+        <!-- Steal a specific component to display on this page only -->
+        <script type="text/steal-module">
+            import maps from "js/dist/components/map/map";
+            //maps("#map-container");
         </script>
 
-    </body>
+</body>
 </html>

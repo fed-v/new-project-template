@@ -3,8 +3,10 @@
  */
 
 import $ from "jquery";
-import {COMPANY_ADDRESS} from "../../js/utils/constants.js";  // Don't forget the curly braces!
+import {COMPANY_ADDRESS} from "../../../js/utils/constants.js";  // Don't forget the curly braces!
 
+
+// This should be wrapped in a function and the element should be passed as a parameter when called
 $("#map").gmap3({
     action: "init",
     marker: {
