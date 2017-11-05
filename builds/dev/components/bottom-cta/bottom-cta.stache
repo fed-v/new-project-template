@@ -1,0 +1,19 @@
+
+    <img class="cta-logo" src="https://www.hover.com/blog/wp-content/themes/hover-2016/assets/images/logo.png" height="28" width="100" title="Hover" alt="Hover" />
+
+    <form class="cta-input-wrapper">
+        <input id="cta-input" class="cta-input" type="text" placeholder="Find the perfect domain name" />
+    </form>
+
+    <button id="cta-button" class="button">
+
+        <!-- Hide on desktop -->
+        <svg class="icon-search" role="img" title="{{ ./name }}">
+            <use xlink:href="images/icons.svg#search" />
+        </svg>
+
+        <!-- Hide on mobile -->
+        <span class="cta-button-text">CHECK AVAILABILITY</span>
+
+    </button >
+

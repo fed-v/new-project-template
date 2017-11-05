@@ -11,8 +11,9 @@ import 'retinajs';
 
 
 // Load components the will be used across the entire site
-import header from "../components/header/header";
-import footer from "../components/footer/footer";
-//import map from "../components/map/map";
+import "../components/header/header";
+import "../components/footer/footer";
+//import "../components/map/map";
+import "../components/bottom-cta/bottom-cta";
 
 
