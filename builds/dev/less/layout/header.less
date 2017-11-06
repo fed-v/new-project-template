@@ -22,7 +22,7 @@
   }
 }
 
-.site-header .navigation-list{
+.navigation-list{
   background: @white;
   color: @dark-grey-text-color;
   position: absolute;
@@ -33,18 +33,27 @@
   left: 0;
   text-align: center;
 
+  .display(flex);
+  .flex-direction(column);
+
  /* Slide Animation */
   max-height: 0;
   overflow: hidden;
   .transition(1s ease-in-out);
+
+  .active {
+    color: @dark-grey;
+  }
 }
 
-.site-header .navigation-list.open{
+
+.navigation-list.open{
   max-height: 580px; // Total height of the menu
   .box-shadow(0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2));
 }
 
-.site-header .navigation-list li a {
+.navigation-list li a,
+.active {
   display: inline-block;
   padding: 15px 0;
   border-bottom:1px solid @grey;
@@ -125,7 +134,7 @@
         margin: 0;
     }
 
-    .site-header .navigation-list{
+    .navigation-list{
         position: relative;
         top: 0;
         width: auto;
@@ -134,9 +143,15 @@
         display: flex;
         max-height: 50px;
         color: @white;
+        .flex-direction(row);
+
+        a {
+          margin-right: 20px;
+        }
     }
 
-    .site-header .navigation-list li a {
+    .navigation-list li a,
+    .active {
         padding: 0;
         border: none;
         width: auto;

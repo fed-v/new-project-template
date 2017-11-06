@@ -8,7 +8,7 @@
         {{#each ./navItems}}
 
             {{#is ./class "active"}}
-                <li><span>{{./title}}</span></li>
+                <li><span class="active">{{./title}}</span></li>
             {{else}}
                 <li><a class="{{ ./class }}"  href="{{ ./href }}">{{ ./title }}</a></li>
             {{/is}}
