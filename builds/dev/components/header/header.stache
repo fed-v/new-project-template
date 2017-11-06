@@ -6,7 +6,13 @@
 
         <!-- Iterate through the navItems and extract each link href and title -->
         {{#each ./navItems}}
-            <li><a {{ #is %key 'contact.html' }} class="showNav" {{ else }} class="test" {{ /is }} href="{{ ./href }}">{{ ./title }}</a></li>
+
+            {{#is ./class "active"}}
+                <li><span>{{./title}}</span></li>
+            {{else}}
+                <li><a class="{{ ./class }}"  href="{{ ./href }}">{{ ./title }}</a></li>
+            {{/is}}
+
         {{/each}}
 
     </ul>
