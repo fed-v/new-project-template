@@ -1,5 +1,8 @@
 /**
  * Header Component
+ *
+ * Styles: ../../less/layout/header.less
+ *
  */
 
 "use strict";
@@ -18,28 +21,30 @@ import template from "./header.stache";
 let currentUrl =  location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 
 
-// Array of page links. Add new items to the menu nav here!
-let HREF_ARRAY = [
-   "page1",
-   "page2",
-   "page3",
-   "contact"
+// Array of link objects used in the stache template
+export const MAIN_NAV = [
+    {
+        title: "Page 1",
+        href: "page1.html"
+    },
+    {
+        title: "Page 2",
+        href: "page2.html"
+    },
+    {
+        title: "Page 3",
+        href: "page3.html"
+    },
+    {
+        title: "Contact Us",
+        href: "contact.html"
+    }
 ];
 
 
-// Array of link objects used in the stache template
-export const MAIN_NAV = [];
-
-
-// Iterate through href array and create an object for each link
-for( let i = 0, length = HREF_ARRAY.length; i <= length; i++) {
-
-    MAIN_NAV.push( {
-        title: HREF_ARRAY[i],
-        href: HREF_ARRAY[i] + ".html",
-        class: (currentUrl === HREF_ARRAY[i] + ".html") ? "active" : "nope"
-    });
-
+// Iterate through the links object and the class based on current page to set active link
+for ( let link of MAIN_NAV) {
+    link.class = (currentUrl === link.href) ? "active" : "nope";
 }
 
 

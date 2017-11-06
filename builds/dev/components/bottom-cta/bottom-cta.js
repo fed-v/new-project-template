@@ -3,6 +3,8 @@
  *	This script is for the CTA found fixed at the bottom of the individual post pages.
  *	It takes a user input and redirects to hover.com/shop to search for that domain.
  *
+ *  Styles: ../../less/components/bottom-cta.less
+ *
  */
 
 'use strict';

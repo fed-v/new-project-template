@@ -1,5 +1,8 @@
 /**
  * Footer Component
+ *
+ * Styles: ../../less/layout/footer.less
+ *
  */
 
 
