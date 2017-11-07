@@ -1,4 +1,4 @@
-<h1> {{ siteName }}</h1>
+<a class="siteName" href="/"><h1> {{ siteName }}</h1></a>
 <nav class="nav-bar" role="navigation">
     <h2 class="offscreen">Main navigation</h2>
     <div class="logo"></div>
