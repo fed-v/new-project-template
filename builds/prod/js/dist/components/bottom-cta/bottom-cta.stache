@@ -1,0 +1,7 @@
+
+    <form class="cta-input-wrapper">
+        <input id="cta-input" class="cta-input" type="text" placeholder="Find the perfect domain name" />
+    </form>
+
+    <button id="cta-button" class="button">CHECK AVAILABILITY</button >
+

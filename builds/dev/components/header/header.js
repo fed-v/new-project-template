@@ -38,6 +38,10 @@ export const MAIN_NAV = [
     {
         title: "Contact Us",
         href: "contact.html"
+    },
+    {
+        title: "About Us",
+        href: "about.html"
     }
 ];
 

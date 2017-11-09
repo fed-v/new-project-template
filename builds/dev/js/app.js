@@ -5,15 +5,14 @@
 "use strict";
 
 // Load dependencies
-import $ from "jquery";
+import 'jquery';
 import 'svg4everybody';
 import 'retinajs';
-
+import 'google-maps';   // Only contact page will use gmaps but it's only 4kb, so who cares.
 
 // Load components the will be used across the entire site
 import "../components/header/header";
 import "../components/footer/footer";
-//import "../components/map/map";
-import "../components/bottom-cta/bottom-cta";
+
 
 

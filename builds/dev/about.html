@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Title tag is MANDATORY -->
-    <title>HTML Boilerplate</title>
+    <title>About Us</title>
 
     <!-- Declare Viewport for Mobile Devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -56,34 +56,9 @@
 
 <main class="main-content" role="main">
 
-    <section>
-        <h2>Contact us</h2>
-        <form id="contactForm" action="#" method="post">
 
-            <div class="formgroup">
-                <label for="name">Name</label>
-                <input id="name" type="text" name="name" maxlength="25" pattern="[a-z A-Z-]+" placeholder="Your name" autofocus></input>
-            </div>
 
-            <div class="formgroup">
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" maxlength="75" placeholder="email@gmail.com"></input>
-            </div>
 
-            <div class="formgroup">
-                <label for="enquiry">Enquiry</label>
-                <textarea id="enquiry" name="enquiry" rows="5" cols="100" maxlength="750" placeholder="Details of your enquiry"></textarea>
-            </div>
-
-            <input class="button" type="submit" value="Send"></input>
-
-        </form>
-    </section>
-
-    <section>
-        <h2>Map</h2>
-        <div id="map-container" class="map"></div>
-    </section>
 
 </main>
 
@@ -101,14 +76,8 @@
 <!--			 	   Javascript Links					   -->
 <!--*******************************************************-->
 
-        <script src="./js/dist/steal.production.js"></script>
+<script src="./js/dist/steal.production.js"></script>
 
-        <!-- Steal a specific component to display on this page only -->
-        <script type="text/steal-module">
-            import maps from "components/map/map";
-            //maps("#map-container");
-
-        </script>
 
 </body>
 </html>
