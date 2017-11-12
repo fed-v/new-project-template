@@ -66,6 +66,9 @@
       "steal-less",
       "steal-stache"
     ],
-    "bundle": []
+    "bundle": [
+      "builds/dev/components/map/map",
+      "builds/dev/components/bottom-cta/bottom-cta"
+    ]
   }
 }

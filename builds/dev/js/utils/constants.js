@@ -5,12 +5,14 @@
 "use strict";
 
 export const SITE_NAME = "Website Title";
-export const PHONE = "555-6789";
+
 export const COMPANY_ADDRESS = {
     address: "First Canadian Place, Toronto, ON",
+    phone: "(647) 555-5555",
     latitude: 43.6488906,
-    longitud: -79.3830613
+    longitude: -79.3830613
 };
+
 export const SOCIAL_MEDIA = [
     {
         name: "Facebook",
@@ -37,3 +39,7 @@ export const SOCIAL_MEDIA = [
         class: "icon instagram"
     }
 ];
+
+export const API_KEYS = {
+    googleMaps: "AIzaSyBD1LtBORL5IyarV0COsUULBcUZ5YDPpLk"
+};

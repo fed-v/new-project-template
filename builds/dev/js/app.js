@@ -8,11 +8,42 @@
 import 'jquery';
 import 'svg4everybody';
 import 'retinajs';
-import 'google-maps';   // Only contact page will use gmaps but it's only 4kb, so who cares.
+
 
 // Load components the will be used across the entire site
 import "../components/header/header";
 import "../components/footer/footer";
 
 
+let updatePage = function(){
 
+    let currentUrl =  location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    switch(currentUrl) {
+
+        case "about.html" : // Do nothing for now
+                            break;
+
+        case "contact.html" : steal.import("builds/dev/components/map/map").then(function(moduleOrPlugin){
+
+                                var plugin = typeof moduleOrPlugin === "function" ?
+                                    moduleOrPlugin : moduleOrPlugin["default"];
+                                plugin("map-container");
+
+                            });
+                            break;
+
+        // Homepage!
+        case ""             : steal.import("builds/dev/components/bottom-cta/bottom-cta").then(function(moduleOrPlugin){
+
+                                // Working on the cta-banner module still!
+
+                            });
+                            break;
+    }
+
+};
+
+$(window).on("hashchange", updatePage);
+
+updatePage();

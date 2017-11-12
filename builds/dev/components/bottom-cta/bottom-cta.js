@@ -10,7 +10,7 @@
 'use strict';
 
 // Import dependencies
-import $ from "jquery";
+import $ from "jquery";  // Isn't jQuery a global dependency?
 
 // Import stache template
 import template from "./bottom-cta.stache";
