@@ -1,0 +1,13 @@
+
+    <ul class="carousel-wrapper">
+
+        <!-- Iterate through the list of icons -->
+        {{#each ./iconsList}}
+            <li><a href="{{ ./url }}">
+                <svg class="icon" role="img" title="{{ ./name }}">
+                    <use xlink:href="images/icons.svg#{{ ./icon }}" />
+                </svg>
+            </a></li>
+        {{/each}}
+
+    </ul>

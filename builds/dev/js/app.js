@@ -34,9 +34,11 @@ let updatePage = function(){
                             break;
 
         // Homepage!
-        case ""             : steal.import("builds/dev/components/bottom-cta/bottom-cta").then(function(moduleOrPlugin){
+        case ""             : steal.import("builds/dev/components/icon-carousel/icon-carousel").then(function(moduleOrPlugin){
 
-                                // Working on the cta-banner module still!
+                                var plugin = typeof moduleOrPlugin === "function" ?
+                                    moduleOrPlugin : moduleOrPlugin["default"];
+                                plugin("#carousel");
 
                             });
                             break;

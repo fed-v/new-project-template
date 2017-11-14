@@ -51,6 +51,7 @@
     "lesshat": "^4.1.0",
     "mocha": "^3.4.2",
     "retinajs": "^2.1.1",
+    "slick-carousel": "^1.8.1",
     "steal": "^0.16.44",
     "steal-less": "^1.2.0",
     "steal-stache": "^3.0.5",
@@ -68,7 +69,8 @@
     ],
     "bundle": [
       "builds/dev/components/map/map",
-      "builds/dev/components/bottom-cta/bottom-cta"
+      "builds/dev/components/bottom-cta/bottom-cta",
+      "builds/dev/components/icon-carousel/icon-carousel"
     ]
   }
 }
