@@ -25,14 +25,14 @@ export default function(selector) {
     $(selector).children(0).slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
 
         // Override the default arrow buttons
-        nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg class="" role="img" title="Next"><use xlink:href="http://localhost:3000/images/icons.svg#sleekArrow"/></svg></button>',
-        prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg class="" role="img" title="Previous"><use xlink:href="http://localhost:3000/images/icons.svg#sleekArrow"/></svg></button>',
+        nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg class="" role="img" title="Next"><use xlink:href="images/icons.svg#sleekArrow"/></svg></button>',
+        prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg class="" role="img" title="Previous"><use xlink:href="images/icons.svg#sleekArrow"/></svg></button>',
 
-        //autoplay: true,
-        //autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 5000,
         responsive: [
             {
                 breakpoint: 768,
@@ -44,5 +44,8 @@ export default function(selector) {
             }
         ]
     });
+
+    // Remove inline styles from Slick to avoid overriding with !important
+    $(".slickListItem").removeAttr( 'style' );
 
 }
