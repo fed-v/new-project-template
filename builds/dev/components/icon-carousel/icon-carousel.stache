@@ -3,12 +3,17 @@
 
         <!-- Iterate through the list of icons -->
         {{#each ./iconsList}}
-            <li class="slickListItem">
-                <a href="{{ ./url }}">
-                    <svg class="icon" role="img" title="{{ ./name }}">
-                        <use xlink:href="images/icons.svg#{{ ./icon }}" />
-                    </svg>
-                </a>
+            <li >
+
+                <!-- This extra div is to make the content vertical aligned using flex -->
+                <div class="slickListItem">
+                    <a href="{{ ./url }}">
+                        <svg class="icon" role="img" title="{{ ./name }}">
+                            <use xlink:href="images/icons.svg#{{ ./icon }}" />
+                        </svg>
+                    </a>
+                </div>
+
             </li>
         {{/each}}
 

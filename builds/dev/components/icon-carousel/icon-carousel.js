@@ -45,7 +45,4 @@ export default function(selector) {
         ]
     });
 
-    // Remove inline styles from Slick to avoid overriding with !important
-    $(".slickListItem").removeAttr( 'style' );
-
 }
