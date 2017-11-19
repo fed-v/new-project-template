@@ -2,29 +2,29 @@
  * Main entry point of the application
  */
 
-"use strict";
+'use strict';
 
 // Load dependencies
 import 'jquery';
 import 'svg4everybody';
 import 'retinajs';
 
-
 // Load components the will be used across the entire site
-import "../components/header/header";
-import "../components/footer/footer";
+import '../components/header/header';
+import '../components/footer/footer';
+
+// Load utility functions
+import {getPage} from 'builds/dev/js/utils/utils.js';
 
 
 let updatePage = function(){
 
-    let currentUrl =  location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    switch(getPage()) {
 
-    switch(currentUrl) {
-
-        case "about.html" : // Do nothing for now
+        case "about" : // Do nothing for now
                             break;
 
-        case "contact.html" : steal.import("builds/dev/components/map/map").then(function(moduleOrPlugin){
+        case "contact" : steal.import("builds/dev/components/map/map").then(function(moduleOrPlugin){
 
                                 var plugin = typeof moduleOrPlugin === "function" ?
                                     moduleOrPlugin : moduleOrPlugin["default"];
@@ -46,6 +46,6 @@ let updatePage = function(){
 
 };
 
-$(window).on("hashchange", updatePage);
+$(window).on('hashchange', updatePage);
 
 updatePage();
