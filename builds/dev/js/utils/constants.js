@@ -44,35 +44,56 @@ export const ICONS_LIST = [
     {
         name: "Company 1",
         url: "https://companyurl.com",
-        icon: "amazon"
+        icon: "instagramType"
     },
     {
         name: "Company 2",
         url: "https://companyurl.com",
-        icon: "discover"
+        icon: "mparticle"
     },
     {
         name: "Company 3",
         url: "https://companyurl.com",
-        icon: "visa"
+        icon: "wire"
     },
     {
         name: "Company 4",
         url: "https://companyurl.com",
-        icon: "amex"
+        icon: "stylus"
     },
     {
         name: "Company 5",
         url: "https://companyurl.com",
-        icon: "mastercard"
+        icon: "ibm"
     },
     {
         name: "Company 6",
         url: "https://companyurl.com",
-        icon: "usps"
+        icon: "netuitive"
     }
 ];
 
 export const API_KEYS = {
     googleMaps: "AIzaSyBD1LtBORL5IyarV0COsUULBcUZ5YDPpLk"
+};
+
+export const CONTACT_FORM_LIST = {
+    id: "contactForm",
+    action: "includes/contactForm.php",
+    fields: [
+        {
+            type: "text",
+            label: "Full name",
+            name: "fullName",
+            required: true,
+            placeholder: ""
+        },
+        {
+            type: "email",
+            label: "Email",
+            name: "email",
+            required: true,
+            placeholder: ""
+        }
+    ]
 };
