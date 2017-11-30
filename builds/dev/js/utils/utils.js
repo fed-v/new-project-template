@@ -34,3 +34,19 @@ export let getPage = function() {
 	return fileName.replace(/\.[^/.]+$/, "");
 
 }
+
+
+/**
+ * Method which returns a random number between two values
+ *
+ * @function getRandomIntInclusive
+ * @param min {number} the minimum value parameter
+ * @param max {number} the largest value parameter
+ * @returns {number} the name of the current page
+ *
+ **/
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
