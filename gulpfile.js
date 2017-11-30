@@ -29,7 +29,8 @@ var gulp         = require('gulp'),
     config       = require('./config.json'),            // Import JSON file with all configuration variables
     svgmin       = require('gulp-svgmin'),
     lesshint     = require('gulp-lesshint'),            // Lint LESS
-    mocha        = require('gulp-mocha');
+    mocha        = require('gulp-mocha'),
+    istanbul     = require('gulp-istanbul');            // Unit test coverage
 
 //////////////////////////////////////////////////////
 ///     Gulp Tasks
@@ -73,23 +74,6 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
-// Scripts Task: Fetches Bundled javascript file and uglifies it.
-// Then pipes the result to production folder.
-gulp.task('scripts', function() {
-	 return gulp.src(config.DEV_ASSETS.scripts + 'main.js')
-     .pipe(plumber({ errorHandler: onError }))
-     .pipe(size({ title: "Source file", showFiles: true }))
-	 .pipe(jshint())
-	 .pipe(jshint.reporter('default'))
-	 .pipe(uglify())
-     .pipe(rename('script.min.js'))
-	 .pipe(gulp.dest(config.PROD_ASSETS.scripts))
-     .pipe(size({ title: "Compressed file", showFiles: true }))
-     .pipe(browserSync.reload({ stream:true } ))
-	 .pipe(notify({ message: 'Scripts task complete' }));
-});
-
-
 
 gulp.task('mocha', function() {
     return gulp.src([config.BASE_PATH.dev + 'components/**/*-test.js', config.DEV_ASSETS.scripts + 'tests/*-test.js'], {read: false})
@@ -97,7 +81,6 @@ gulp.task('mocha', function() {
     .pipe(mocha({reporter: 'spec'}))
     .pipe(notify({ message: 'Mocha tests completed' }));
 });
-
 
 
 // Set-server task: Creates a server in port 3000 using Browser-sync and
@@ -153,6 +136,7 @@ gulp.task('images', function() {
 	.pipe(notify({ message: 'Images task complete' }));
 });
 
+
 // Minify svgoPlugins
 gulp.task('svg-min', function () {
     return gulp.src(config.PROD_ASSETS.images + '/*.svg')
@@ -175,6 +159,7 @@ gulp.task('svg-min', function () {
         .pipe(gulp.dest(config.PROD_ASSETS.images))
         .pipe(notify({ message: 'SVG task complete' }));
 });
+
 
 // Error Handler
 var onError = function(err) {
