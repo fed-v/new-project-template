@@ -21,26 +21,24 @@ let updatePage = function(){
 
     switch(getPage()) {
 
-        case "about" : // Do nothing for now
+        case "about" : steal.import("builds/dev/components/icon-carousel/icon-carousel").then(function(moduleOrPlugin){
+
+                            let plugin = typeof moduleOrPlugin === "function" ?
+                                moduleOrPlugin : moduleOrPlugin["default"];
+                                plugin("#carousel");
+                            });
                             break;
 
         case "contact" : steal.import("builds/dev/components/map/map").then(function(moduleOrPlugin){
 
-                                var plugin = typeof moduleOrPlugin === "function" ?
-                                    moduleOrPlugin : moduleOrPlugin["default"];
+                            let plugin = typeof moduleOrPlugin === "function" ?
+                                moduleOrPlugin : moduleOrPlugin["default"];
                                 plugin("map-container");
-
                             });
                             break;
 
         // Homepage!
-        case ""             : steal.import("builds/dev/components/icon-carousel/icon-carousel").then(function(moduleOrPlugin){
-
-                                var plugin = typeof moduleOrPlugin === "function" ?
-                                    moduleOrPlugin : moduleOrPlugin["default"];
-                                plugin("#carousel");
-
-                            });
+        case ""             : // Do nothing for now
                             break;
     }
 
