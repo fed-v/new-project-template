@@ -16,5 +16,8 @@ describe('footer', function() {
 
     });
 
+    // Pending tests
+    it("Should be tested more");
+
 });
 
