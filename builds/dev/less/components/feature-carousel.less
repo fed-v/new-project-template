@@ -1,0 +1,106 @@
+//////////////////////////////////////////////////////
+///     Feature Carousel Component Styles
+//////////////////////////////////////////////////////
+
+
+.features-carousel {
+  text-align: center;
+
+  h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  /* Dots */
+  .slick-dots li
+  {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+  }
+  .slick-dots li button
+  {
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+  .slick-dots li button:before
+  {
+    font-size: 45px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    color: @grey;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-dots li.slick-active button:before
+  {
+    color: @black;
+  }
+
+}
+
+
+
+
+////////////////////////////////////
+// Tablet View
+///////////////////////////////////
+
+@media @mq-tablet {
+
+  .features-carousel {
+
+    h3 {
+      font-size: 24px;
+    }
+
+  }
+
+}
+
+
+////////////////////////////////////
+// Desktop View
+///////////////////////////////////
+
+@media @mq-desktop {
+
+  .features-carousel {
+    text-align: left;
+
+    .icon {
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-right: 36px;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

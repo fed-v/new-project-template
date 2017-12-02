@@ -71,7 +71,8 @@
     "bundle": [
       "builds/dev/components/map/map",
       "builds/dev/components/bottom-cta/bottom-cta",
-      "builds/dev/components/icon-carousel/icon-carousel"
+      "builds/dev/components/icon-carousel/icon-carousel",
+      "builds/dev/components/feature-carousel/feature-carousel"
     ]
   }
 }

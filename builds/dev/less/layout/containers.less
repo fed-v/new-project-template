@@ -1,11 +1,19 @@
 //////////////////////////////////////////////////////////////
-//  PRIMARY STRUCTURE
+//  Primary Structure - Content blocks
 
+// General content wrapper that adds padding and section specific backgrounds
 .container {
-  max-width: @max-width;
-  margin: 0 auto;
+  padding: 50px 0;
+
+  // If the centered content is not set by "main-content", use this and set the
+  // sections to width 100%.
+
+  //width: 80%;
+  //margin: auto;
+  //padding: 30px 25px 50px;
 }
 
+// Flex containers
 .multi-column,
 .two-column {
   .display(flex);
@@ -13,6 +21,7 @@
 }
 
 // Two column container with columns of different size
+// * If you still want two columns but of same size, just use the "multi-column"
 .two-column {
   .small-column {
     .flex(1);
@@ -26,8 +35,11 @@
   }
 }
 
+// Content blocks that are placed in rows or columns
 .flex-item {
   margin: 0 0 36px 0;
+  .justify-content(center);
+
   &:last-child {
     margin-right: 0;
   }
@@ -48,15 +60,12 @@
 
 @media @mq-tablet {
 
-
   // TODO: Check if I still want this
   .main-content {
     width: 80%;
     margin: auto;
-    padding: 30px 25px 50px 25px;
+    padding: 30px 25px 20px 25px;
     .box-shadow(0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2));
-
-    //height: 1200px;
   }
 
 }
@@ -67,6 +76,7 @@
 //////////////////////////////////////////////////////
 
 @media @mq-desktop {
+
   .multi-column,
   .two-column {
     .flex-direction(row);
@@ -80,6 +90,11 @@
 
   .flex-item {
     margin: 0 0 0 36px;
+    .flex(1);
+
+    &:first-child{
+      margin: 0;
+    }
 
     &:last-child {
       margin-right: 0;

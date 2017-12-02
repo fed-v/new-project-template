@@ -73,6 +73,24 @@ export const ICONS_LIST = [
     }
 ];
 
+export const FEATURES_LIST = [
+    {
+        title: "Feature",
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        icon: "abacus"
+    },
+    {
+        title: "Feature",
+        text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        icon: "tower"
+    },
+    {
+        title: "Feature",
+        text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        icon: "lock"
+    }
+];
+
 export const API_KEYS = {
     googleMaps: "AIzaSyBD1LtBORL5IyarV0COsUULBcUZ5YDPpLk"
 };

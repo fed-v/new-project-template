@@ -38,7 +38,12 @@ let updatePage = function(){
                             break;
 
         // Homepage!
-        case ""             : // Do nothing for now
+        case ""             : steal.import("builds/dev/components/feature-carousel/feature-carousel").then(function(moduleOrPlugin){
+
+                                let plugin = typeof moduleOrPlugin === "function" ?
+                                moduleOrPlugin : moduleOrPlugin["default"];
+                                plugin("#features");
+                            });
                             break;
     }
 

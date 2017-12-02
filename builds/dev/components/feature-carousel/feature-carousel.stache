@@ -1,0 +1,21 @@
+
+        <div class="container">
+            <div class="features-carousel multi-column">
+
+                <!-- Iterate through the list of icons -->
+                {{#each ./featuresList}}
+                    <div class="flex-item multi-column">
+                        <div>
+                            <svg class="icon" role="img" title="{{ ./title }}">
+                                <use xlink:href="images/icons.svg#{{ ./icon }}" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>{{./title}}</h3>
+                            <p>{{./text}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+
+            </div>
+        </div>
