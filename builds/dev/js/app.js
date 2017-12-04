@@ -12,6 +12,8 @@ import 'retinajs';
 // Load components the will be used across the entire site
 import '../components/header/header';
 import '../components/footer/footer';
+import '../components/scroll-to-top/scroll-to-top';
+
 
 // Load utility functions
 import {getPage} from 'builds/dev/js/utils/utils.js';
