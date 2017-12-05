@@ -7,10 +7,15 @@
 
 "use strict";
 
-// Fetch the list of company icons that will be used
+// Import list of company icons that will be used
 import {ICONS_LIST} from "../../js/utils/constants.js";  // Don't forget the curly braces!
-import slick  from "slick-carousel";
+
+// Import Slick JS
+import "slick-carousel";
+
+// Import component specific styles
 import "slick-carousel/slick/slick.less";
+import './icon-carousel.less';
 
 // Import stache template
 import template from "./icon-carousel.stache";
