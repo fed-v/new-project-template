@@ -7,6 +7,8 @@
 import {COMPANY_ADDRESS, API_KEYS} from "../../js/utils/constants.js";  // Don't forget the curly braces!
 import GoogleMapsLoader  from "google-maps";
 
+import './map.less';
+
 export default function(selector) {
 
     // Set API key

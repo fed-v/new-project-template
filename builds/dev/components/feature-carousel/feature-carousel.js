@@ -9,8 +9,9 @@
 
 // Fetch the array of features that will be used
 import {FEATURES_LIST} from "../../js/utils/constants.js";  // Don't forget the curly braces!
-import slick  from "slick-carousel";
+import "slick-carousel";
 import "slick-carousel/slick/slick.less";
+import './feature-carousel.less';
 
 // Import stache template
 import template from "./feature-carousel.stache";

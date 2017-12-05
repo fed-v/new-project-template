@@ -5,6 +5,7 @@
 "use strict";
 
 import $ from "jquery";
+import './scroll-to-top.less';
 
 // Create the scroll button
 let scroll_btn = '<button id="scroll_btn" class="scroll_btn"><svg class="icon" role="img" title="arrow"><use xlink:href="images/icons.svg#sleekArrow"/></svg></button>';
