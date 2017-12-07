@@ -75,11 +75,11 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('mocha', function() {
+gulp.task('test', function() {
     return gulp.src([config.BASE_PATH.dev + 'components/**/*-test.js', config.DEV_ASSETS.scripts + 'tests/*-test.js'], {read: false})
     .pipe(plumber({ errorHandler: onError }))
     .pipe(mocha({reporter: 'spec'}))
-    .pipe(notify({ message: 'Mocha tests completed' }));
+    .pipe(notify({ message: 'Tests completed' }));
 });
 
 
@@ -177,9 +177,9 @@ var onError = function(err) {
 
 // Default Task: Executes all the declared tasks except clean and watches
 // development environment for any changes made.
-gulp.task('default', ['styles', 'mocha', 'minify-html', /*'images', */'set-server'], function() {
+gulp.task('default', ['styles', 'test', 'minify-html', /*'images', */'set-server'], function() {
     gulp.watch( config.DEV_ASSETS.styles + '**/*.less', ['styles'] );
     gulp.watch( config.BASE_PATH.dev + '**/*.html', ['minify-html'] );
     gulp.watch( config.PROD_ASSETS.images + '**', ['reload'] );         // Watch for changes in any of the prod images
-    gulp.watch([config.BASE_PATH.dev + 'components/**/*-test.js', config.DEV_ASSETS.scripts + 'tests/*-test.js'], ['mocha']);
+    gulp.watch([config.BASE_PATH.dev + 'components/**/*-test.js', config.DEV_ASSETS.scripts + 'tests/*-test.js'], ['test']);
 });
