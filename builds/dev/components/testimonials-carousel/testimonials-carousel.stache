@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="testimonials-carousel multi-column">
+
+        <!-- Iterate through the list of icons -->
+        {{#each ./testimonialsList}}
+        <div class="flex-item multi-column">
+            <div>
+                <img src="{{./image}}" />
+            </div>
+            <div>
+                <h3>{{./name}}</h3>
+                <p>{{./text}}</p>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

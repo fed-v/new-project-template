@@ -25,26 +25,30 @@ let updatePage = function(){
 
         case "about" : steal.import("builds/dev/components/icon-carousel/icon-carousel").then(function(moduleOrPlugin){
 
-                            let plugin = typeof moduleOrPlugin === "function" ?
-                                moduleOrPlugin : moduleOrPlugin["default"];
+                                let plugin = typeof moduleOrPlugin === "function" ? moduleOrPlugin : moduleOrPlugin["default"];
                                 plugin("#carousel");
                             });
                             break;
 
         case "contact" : steal.import("builds/dev/components/map/map").then(function(moduleOrPlugin){
 
-                            let plugin = typeof moduleOrPlugin === "function" ?
-                                moduleOrPlugin : moduleOrPlugin["default"];
+                                let plugin = typeof moduleOrPlugin === "function" ? moduleOrPlugin : moduleOrPlugin["default"];
                                 plugin("map-container");
                             });
                             break;
 
         // Homepage!
-        case ""             : steal.import("builds/dev/components/feature-carousel/feature-carousel").then(function(moduleOrPlugin){
+        case ""             : steal.import("builds/dev/components/testimonials-carousel/testimonials-carousel").then(function(moduleOrPlugin){
 
-                                let plugin = typeof moduleOrPlugin === "function" ?
-                                moduleOrPlugin : moduleOrPlugin["default"];
+                                let plugin = typeof moduleOrPlugin === "function" ? moduleOrPlugin : moduleOrPlugin["default"];
+                                plugin("#testimonials");
+
+                            });
+                            steal.import("builds/dev/components/feature-carousel/feature-carousel").then(function(moduleOrPlugin){
+
+                                let plugin = typeof moduleOrPlugin === "function" ? moduleOrPlugin : moduleOrPlugin["default"];
                                 plugin("#features");
+
                             });
                             break;
     }
